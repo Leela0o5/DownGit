@@ -1,4 +1,4 @@
-# DownGit
+# DownGit (THIS WAS MADE CAUSE I WAS BORED)
 
 DownGit is a simple Chrome extension that lets you download folders or files from any public GitHub repository as a ZIP file.
 
