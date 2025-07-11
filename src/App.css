@@ -1,135 +1,21 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: #0f0f1b;
-  font-family: "Segoe UI", sans-serif;
-  overflow: hidden;
-  align-items: center;
+@import "tailwindcss";
+
+@font-face {
+  font-family: "github";
+  src: url("github_font.ttf");
 }
 
-.glass-container {
-  z-index: 10;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  padding: 40px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 30px rgba(80, 78, 78, 0.35);
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 1rem;
-}
-
-input[type="text"] {
-  width: 90%;
-  padding: 14px 16px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
-  outline: none;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-button {
-  width: 50%;
-  padding: 14px;
-  background: linear-gradient(135deg, #38ef7d, #11998e);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-button:disabled {
-  background: #4b5563;
-  cursor: not-allowed;
-}
-
-.toast {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #dc2626;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-weight: 500;
-  z-index: 20;
-}
-
-.page-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  background: #0f0f1b;
-}
-
-.blob {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.5;
-  z-index: 1;
-}
-
-.blob1 {
-  background: #ff00ff;
-  top: -100px;
-  left: -100px;
-}
-
-.blob2 {
-  background: #00ffff;
-  bottom: -100px;
-  right: -100px;
-}
-
-.blob3 {
-  background: #2c2214;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-}
-
-@media screen and (max-width: 480px) {
-  .glass-container {
-    padding: 1.2rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  input[type="text"],
-  button {
-    font-size: 0.95rem;
-  }
+@theme {
+  --color-github-dark: oklch(0.1763 0.014 258.36);
+  --color-github-card-bg: oklch(0.2735 0.0179 251.92);
+  --color-border-color: oklch(0.3837 0.0179 254.74);
+  --color-secondary-text: oklch(0.5419 0.0151 251.66);
+  --color-primary-text: oklch(1 0 0);
+  --color-text-bar: oklch(0.2198 0.0182 255.71);
+  --color-text-bar-border: oklch(0.3837 0.0179 254.74);
+  --color-text-url-border: oklch(0.5686 0.2023 259.67);
+  --color-btn-primary: oklch(0.546 0.1474 146.26);
+  --color-btn-border: oklch(0.6098 0.1316 147.68);
+  --color-btn-hover: oklch(0.5761 0.1541 146.04);
+  --font-github: github;
 }
