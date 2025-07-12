@@ -100,22 +100,8 @@ function DownGit() {
   };
 
   return (
-      //     <input
-    //       type="text"
-    //       placeholder="Paste the GitHub URL here"
-    //       value={inputURL}
-    //       onChange={(e) => setInputUrl(e.target.value)}
-    //     />
-    //     <button onClick={download} disabled={loading}>
-    //       {loading ? "Downloading..." : "Download as ZIP"}
-    //     </button>
-    //   </div>
-
-    //   
-    // </div>
-
-    <div className="w-full h-screen flex justify-center items-center bg-github-dark drop-shadow-xl card">
-      <div className="w-[400px] h-[250px] bg-github-card-bg rounded-3xl border-border-color border flex flex-col items-center justify-center">
+    <div className="w-full h-screen flex justify-center items-center bg-github-dark drop-shadow-xl flex-col">
+      <div className="card">
         <h1 className="text-primary-text font-github font-bold text-3xl">
           DownGit
         </h1>
@@ -137,7 +123,13 @@ function DownGit() {
           <HardDriveDownload size={17} />
         </span>
       </div>
-      {showToast && <div className="toast">{error}</div>}
+      <p 
+      className={clsx("border border-border-color text-orange-400 shadow-2xl shadow-gray-700 font-github bg-github-card-bg absolute px-20 py-4 rounded-lg transition-all ease-in-out duration-300",
+        {
+          'opacity-100 bottom-10': showToast,
+          'opacity-0 bottom-0': !showToast,
+        }
+      )}>{error}</p>
     </div>
   );
 }
