@@ -19,3 +19,17 @@
   --color-btn-hover: oklch(0.5761 0.1541 146.04);
   --font-github: github;
 }
+
+.card {
+  width: 400px;
+  height: 250px;
+  background-color: var(--color-github-card-bg);
+  border-radius: 24px;
+  border-color: var(--color-border-color);
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 50px 10px rgb(34, 34, 34);
+}
