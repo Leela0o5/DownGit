@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: "0.0.0.0", 
-    allowedHosts: "all",                        // Required for Render
+    allowedHosts: ["downgit.onrender.com"]    ,                   // Required for Render
     port: parseInt(process.env.PORT) || 5173  // Use Render's port or default to 5173
   }
 });
